@@ -56,6 +56,37 @@ entries:
     urls:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-gpu-operator-0.1.12-rc.4/tfy-gpu-operator-0.1.12-rc.4.tgz
     version: 0.1.12-rc.4
+  - apiVersion: v2
+    created: "2024-01-31T19:30:32.120763883Z"
+    dependencies:
+    - alias: aws-eks-gpu-operator
+      condition: clusterType.awsEks
+      name: gpu-operator
+      repository: https://helm.ngc.nvidia.com/nvidia
+      version: v23.9.1
+    - alias: gcp-gke-standard-dcgm-exporter
+      condition: clusterType.gcpGkeStandard
+      name: dcgm-exporter
+      repository: https://nvidia.github.io/dcgm-exporter/helm-charts
+      version: 3.1.2
+    - alias: azure-aks-dcgm-exporter
+      condition: clusterType.azureAks
+      name: dcgm-exporter
+      repository: https://nvidia.github.io/dcgm-exporter/helm-charts
+      version: 3.1.2
+    - alias: civo-talos-gpu-operator
+      condition: clusterType.civoTalos
+      name: gpu-operator
+      repository: https://helm.ngc.nvidia.com/nvidia
+      version: v23.9.1
+    description: Truefoundry GPU Operator
+    digest: 7a769776dec8e80337f7055f74933f1c93d3f89934cf96a72cd0e874446353cc
+    maintainers:
+    - name: truefoundry
+    name: tfy-gpu-operator
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-gpu-operator-0.1.12-rc.4/tfy-gpu-operator-0.1.12-rc.4.tgz
+    version: 0.1.12-rc.4
   tfy-grafana:
   - apiVersion: v2
     created: "2024-01-31T19:26:59.35771346Z"
@@ -169,6 +200,17 @@ entries:
     version: 0.2.0
   tfy-notebook-controller:
   - apiVersion: v2
+    created: "2024-01-31T19:30:33.873775187Z"
+    description: Notebook controller
+    digest: 065db8c29f9f6b32546c4927c7d1e21c9bbdff60c1de5949720c30b7e24c57e4
+    maintainers:
+    - name: truefoundry
+    name: tfy-notebook-controller
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.3/tfy-notebook-controller-0.3.3.tgz
+    version: 0.3.3
+  - apiVersion: v2
     created: "2024-01-31T19:20:54.943937326Z"
     description: Notebook controller
     digest: 805acdf8ee32cd66b3fa7d9e0c1513f6f5ba0eee13e1e76ff6c7fd581d7fa852
@@ -179,4 +221,4 @@ entries:
     urls:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.2/tfy-notebook-controller-0.3.2.tgz
     version: 0.3.2
-generated: "2024-01-31T19:27:00.377382824Z"
+generated: "2024-01-31T19:30:33.873796707Z"
