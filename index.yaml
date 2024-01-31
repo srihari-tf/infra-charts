@@ -1,5 +1,172 @@
 apiVersion: v1
 entries:
+  tfy-agent:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-31T19:26:58.924763Z"
+    description: Truefoundry workload agent for k8s clusters
+    digest: a531d096700844f750193948141596bae209e1c683ad061d35964473103b2a2e
+    name: tfy-agent
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-agent-0.2.19/tfy-agent-0.2.19.tgz
+    version: 0.2.19
+  tfy-buildkitd-service:
+  - apiVersion: v2
+    appVersion: 0.12.0
+    created: "2024-01-31T19:26:59.042074476Z"
+    description: Buildkitd service chart
+    digest: 4aafc5193546ba702ae0418877d168abb41d8e056081fe9b4663bbe9cb5b6dd0
+    maintainers:
+    - name: truefoundry
+    name: tfy-buildkitd-service
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-buildkitd-service-0.1.2/tfy-buildkitd-service-0.1.2.tgz
+    version: 0.1.2
+  tfy-gpu-operator:
+  - apiVersion: v2
+    created: "2024-01-31T19:26:59.147831843Z"
+    dependencies:
+    - alias: aws-eks-gpu-operator
+      condition: clusterType.awsEks
+      name: gpu-operator
+      repository: https://helm.ngc.nvidia.com/nvidia
+      version: v23.9.1
+    - alias: gcp-gke-standard-dcgm-exporter
+      condition: clusterType.gcpGkeStandard
+      name: dcgm-exporter
+      repository: https://nvidia.github.io/dcgm-exporter/helm-charts
+      version: 3.1.2
+    - alias: azure-aks-dcgm-exporter
+      condition: clusterType.azureAks
+      name: dcgm-exporter
+      repository: https://nvidia.github.io/dcgm-exporter/helm-charts
+      version: 3.1.2
+    - alias: civo-talos-gpu-operator
+      condition: clusterType.civoTalos
+      name: gpu-operator
+      repository: https://helm.ngc.nvidia.com/nvidia
+      version: v23.9.1
+    description: Truefoundry GPU Operator
+    digest: fdf5d04381c017500210edb2a75b0680bbb4934623d5dd24e11993f08a94fb00
+    maintainers:
+    - name: truefoundry
+    name: tfy-gpu-operator
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-gpu-operator-0.1.12-rc.4/tfy-gpu-operator-0.1.12-rc.4.tgz
+    version: 0.1.12-rc.4
+  tfy-grafana:
+  - apiVersion: v2
+    created: "2024-01-31T19:26:59.35771346Z"
+    dependencies:
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.58.7
+    description: Truefoundry grafana provisioner
+    digest: 85be2219fe941b9c664030e37f3fe53a442ef838cc4f864aea3dc8dc6908eb3f
+    maintainers:
+    - name: truefoundry
+    name: tfy-grafana
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-grafana-0.1.4/tfy-grafana-0.1.4.tgz
+    version: 0.1.4
+  tfy-inferentia-operator:
+  - apiVersion: v2
+    created: "2024-01-31T19:26:59.454830529Z"
+    description: Truefoundry Inferentia Operator
+    digest: 33b865fbe21dbb210ab8c9363989ff150e282e7cd3e159ed6bde19db728f2a36
+    maintainers:
+    - name: truefoundry
+    name: tfy-inferentia-operator
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-inferentia-operator-0.2.1/tfy-inferentia-operator-0.2.1.tgz
+    version: 0.2.1
+  tfy-istio-ingress:
+  - apiVersion: v2
+    created: "2024-01-31T19:26:59.583739354Z"
+    dependencies:
+    - name: gateway
+      repository: https://istio-release.storage.googleapis.com/charts
+      version: 1.20.1
+    description: ArgoCD Applications for istio ingress config
+    digest: 23255bec5603ba1224439c9d484ff24bd2ece7fd51909b252b459536f81bf161
+    maintainers:
+    - name: truefoundry
+    name: tfy-istio-ingress
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-istio-ingress-0.1.2/tfy-istio-ingress-0.1.2.tgz
+    version: 0.1.2
+  tfy-karpenter:
+  - apiVersion: v2
+    appVersion: 0.27.2
+    created: "2024-01-31T19:26:59.78779401Z"
+    dependencies:
+    - name: karpenter
+      repository: oci://public.ecr.aws/karpenter
+      version: v0.27.2
+    description: Truefoundry karpenter provisioner
+    digest: 843f50d989999ed45a64feb9d6e3068d5642b8f8edb219ba957f1986c6c75dee
+    maintainers:
+    - name: truefoundry
+    name: tfy-karpenter
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-karpenter-0.2.0/tfy-karpenter-0.2.0.tgz
+    version: 0.2.0
+  tfy-karpenter-config:
+  - apiVersion: v2
+    created: "2024-01-31T19:26:59.945932271Z"
+    description: ArgoCD Applications for karpenter config
+    digest: a6a3ca0af113a8fec6bc0d916ebbc2cef4e1993d31d72ad7928fa1bc694acaa4
+    name: tfy-karpenter-config
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-karpenter-config-0.1.18/tfy-karpenter-config-0.1.18.tgz
+    version: 0.1.18
+  tfy-kserve:
+  - apiVersion: v2
+    created: "2024-01-31T19:27:00.068320027Z"
+    description: Kserve components
+    digest: be5d6c1fd0e3f806adba0f2244298173904f1ecec71ecdaac330447be333736d
+    maintainers:
+    - name: truefoundry
+    name: tfy-kserve
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-kserve-0.1.1/tfy-kserve-0.1.1.tgz
+    version: 0.1.1
+  tfy-loki:
+  - apiVersion: v2
+    created: "2024-01-31T19:27:00.187724948Z"
+    dependencies:
+    - condition: loki.enabled
+      name: loki
+      repository: https://grafana.github.io/helm-charts
+      version: 5.15.0
+    - condition: promtail.enabled
+      name: promtail
+      repository: https://grafana.github.io/helm-charts
+      version: 6.15.0
+    description: Truefoundry Loki Provisioner
+    digest: 6448a27a349656687e149ec1b3e02904835ebb1977ad19b5deff1ae57c5855cd
+    maintainers:
+    - name: truefoundry
+    name: tfy-loki
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-loki-0.1.1/tfy-loki-0.1.1.tgz
+    version: 0.1.1
+  tfy-manifests-template:
+  - apiVersion: v2
+    created: "2024-01-31T19:27:00.27647608Z"
+    description: A Helm chart where all K8s manifest comes from values.yaml
+    digest: b1f405d1b8c9dc1353566fbaeab942e6ba4596736c73dbf70b6e84e6a13bdedc
+    maintainers:
+    - name: truefoundry
+    name: tfy-manifests-template
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-manifests-template-0.2.0/tfy-manifests-template-0.2.0.tgz
+    version: 0.2.0
   tfy-notebook-controller:
   - apiVersion: v2
     created: "2024-01-31T19:20:54.943937326Z"
@@ -12,4 +179,4 @@ entries:
     urls:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.2/tfy-notebook-controller-0.3.2.tgz
     version: 0.3.2
-generated: "2024-01-31T19:20:54.943947485Z"
+generated: "2024-01-31T19:27:00.377382824Z"
