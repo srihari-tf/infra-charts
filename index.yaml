@@ -147,6 +147,15 @@ entries:
     version: 0.2.0
   tfy-karpenter-config:
   - apiVersion: v2
+    created: "2024-02-02T11:12:13.100306629Z"
+    description: ArgoCD Applications for karpenter config
+    digest: dfa42745f83d40b5cafe511a6c2e1ff4552d1250e70b0e57bcaa21f20c6a7d49
+    name: tfy-karpenter-config
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-karpenter-config-0.1.19-rc.1/tfy-karpenter-config-0.1.19-rc.1.tgz
+    version: 0.1.19-rc.1
+  - apiVersion: v2
     created: "2024-01-31T19:26:59.945932271Z"
     description: ArgoCD Applications for karpenter config
     digest: a6a3ca0af113a8fec6bc0d916ebbc2cef4e1993d31d72ad7928fa1bc694acaa4
@@ -277,6 +286,17 @@ entries:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.3/tfy-notebook-controller-0.3.3.tgz
     version: 0.3.3
   - apiVersion: v2
+    created: "2024-02-02T11:12:13.331397175Z"
+    description: Notebook controller
+    digest: 62e382d4b5ba895a095f5dc2e34fad606ce0614dc0bf5380b55395b6cd6a9d66
+    maintainers:
+    - name: truefoundry
+    name: tfy-notebook-controller
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.3-rc.2/tfy-notebook-controller-0.3.3-rc.2.tgz
+    version: 0.3.3-rc.2
+  - apiVersion: v2
     created: "2024-01-31T19:20:54.943937326Z"
     description: Notebook controller
     digest: 805acdf8ee32cd66b3fa7d9e0c1513f6f5ba0eee13e1e76ff6c7fd581d7fa852
@@ -287,4 +307,4 @@ entries:
     urls:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.2/tfy-notebook-controller-0.3.2.tgz
     version: 0.3.2
-generated: "2024-01-31T20:00:11.441708793Z"
+generated: "2024-02-02T11:12:13.331437922Z"
