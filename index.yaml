@@ -286,6 +286,17 @@ entries:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.3/tfy-notebook-controller-0.3.3.tgz
     version: 0.3.3
   - apiVersion: v2
+    created: "2024-02-04T09:33:00.778027933Z"
+    description: Notebook controller
+    digest: c79b60bb0cb2847ebcf31a539625343f5a8aba99afcc4e4e6274dfbd28ca8724
+    maintainers:
+    - name: truefoundry
+    name: tfy-notebook-controller
+    type: application
+    urls:
+    - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.3-rc.5/tfy-notebook-controller-0.3.3-rc.5.tgz
+    version: 0.3.3-rc.5
+  - apiVersion: v2
     created: "2024-02-02T12:37:37.332704749Z"
     description: Notebook controller
     digest: fe84e9ed198abf005ebb5a378861dca2b556abb96895089988c1f34acedd86fb
@@ -340,4 +351,4 @@ entries:
     urls:
     - https://github.com/srihari-tf/infra-charts/releases/download/tfy-notebook-controller-0.3.2/tfy-notebook-controller-0.3.2.tgz
     version: 0.3.2
-generated: "2024-02-02T12:37:37.332767056Z"
+generated: "2024-02-04T09:33:00.778152978Z"
